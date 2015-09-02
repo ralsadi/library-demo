@@ -13,4 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
+//= require bootstrap-datepicker
 //= require_tree .
+
+ready = function() {
+  $('.datepicker, .input-group.date').datepicker({
+    format: "yyyy-mm-dd"
+  });
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
+
